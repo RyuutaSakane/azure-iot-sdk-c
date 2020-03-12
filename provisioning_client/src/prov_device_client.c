@@ -120,7 +120,7 @@ PROV_DEVICE_HANDLE Prov_Device_Create(const char* uri, const char* id_scope, PRO
                 result->ProvDeviceLLHandle = Prov_Device_LL_Create(uri, id_scope, protocol);
                 if (result->ProvDeviceLLHandle == NULL)
                 {
-                    /* Codes_SRS_PROV_DEVICE_CLIENT_12_00x: [ If the Client initialization failed the function shall clean up the all resources and return NULL. ] */
+                    /* Codes_SRS_PROV_DEVICE_CLIENT_12_025: [ If the Client initialization failed the function shall clean up the all resources and return NULL. ] */
                     LogError("Prov_Device_LL_Create failed");
                     free(result);
                     result = NULL;
